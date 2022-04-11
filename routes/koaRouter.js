@@ -1,4 +1,5 @@
 const Router = require("koa-router");
+const { getVideo } = require("../controllers/files");
 const {
   getAllProduct,
   addProducts,
@@ -16,5 +17,6 @@ router.get("/products", getAllProduct);
 router.post("/products", addProducts);
 router.delete("/products/:pId", deleteProducts);
 router.put("/products", updateProducts);
+router.get("/videoFile", getVideo);
 
 module.exports = router;
